@@ -3,11 +3,11 @@ languageCode = "en-us"
 title = "My Digital Garden"
 theme = "hugo-digital-garden-theme"
 themesdir = "../../"
-copyright = "Nigalya Ponya ©"
+copyright = "Paul Martins ©"
 
 
 [params]
-  name = "Nigalya Ponya"
+  name = "Paul Martins"
   description = "Red panda living in the eastern Himalayas."
   initials = "NP"
   googleAnalytics = ""
