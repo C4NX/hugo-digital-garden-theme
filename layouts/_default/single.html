@@ -6,7 +6,7 @@
             <h1 class="display-2 mb-4 text-center">{{ .Title }}</h1>
         </div>
         {{ with .Summary }}
-        <p class="text-center fs-4 fst-italic serif">{{ . }}</p>
+        <p class="text-center fs-4 fst-italic roboto">{{ . }}</p>
         {{ end }}
         <div class="text-center pt-4">
             {{ with .Params.links }}
@@ -21,12 +21,12 @@
     </div>
     <div class="row justify-content-center mb-5">
         <div class="col-12">
-            <p class="card-date m-0">
+            <p class="card-date m-0">                
                 {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
                 {{ with .Date }}
-                    Created {{ .Format $dateFormat }} - 
+                    Créer le {{ .Format $dateFormat }} - 
                 {{ end }}
-                Last updated: {{ .Lastmod.Format $dateFormat }}
+                Mis à jour: {{ .Lastmod.Format $dateFormat }}
             </p>
             <hr class="dropdown-divider">
             <div class="row justify-content-between">
@@ -55,7 +55,7 @@
     </div>
 
     <div class="container-fluid py-2">
-        <div class="serif main-content">
+        <div class="roboto main-content">
             {{ .Content | safeHTML }}
         </div>
     </div>

@@ -7,7 +7,7 @@
 </div>
 <div class="mb-5 py-4">
     <div class="container">
-        <h2 class="bio lh-base fs-1 serif">{{ .Site.Params.Description }}</h2>
+        <h2 class="bio lh-base fs-1 roboto">{{ .Site.Params.Description }}</h2>
     </div>
 </div>
 
@@ -28,7 +28,7 @@
       		</div>
 			{{ with .Site.GetPage "section" "garden" }}
 			<div class="d-flex flex-row-reverse">
-        		<a href="{{ .RelPermalink }}" role="button" class="btn btn-sm see-all">See all articles</a>
+        		<a href="{{ .RelPermalink }}" role="button" class="btn btn-sm see-all">Tout mes articles</a>
       		</div>
       		{{ end }}
 		</div>
@@ -50,7 +50,7 @@
     		</div>
 			{{ with .Site.GetPage "section" "projects" }}
 			<div class="d-flex flex-row-reverse">
-				<a href="{{ .RelPermalink }}" role="button" class="btn btn-sm see-all">See all projects</a>
+				<a href="{{ .RelPermalink }}" role="button" class="btn btn-sm see-all">Tout mes projets</a>
 			</div>    
 			{{ end }}
   		</div>

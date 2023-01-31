@@ -16,20 +16,20 @@
             <div class="col-sm-7">
                     {{ if .Summary | safeHTML }} 
                     <h4 class="card-title display-2">{{ .Title }}</h4>
-                    <p class="serif fs-2 pb-3">{{ .Summary }}</p>
+                    <p class="roboto fs-2 pb-3">{{ .Summary }}</p>
                     {{ else }}
                     <h4 class="card-title display-2 pb-3">{{ .Title }}</h4>
                     {{ end }}
                     <p>
                         <figcaption class="blockquote-footer fs-5">
-                          {{ .Params.Author}}
+                          {{ .Params.Author }}
                         </figcaption>
                       </p>
             </div>
         </div>
 
     <div class="container py-2">
-        <div class="serif main-content p-5">
+        <div class="roboto main-content p-5">
             {{ .Content | markdownify | safeHTML }}
         </div>
     </div>
