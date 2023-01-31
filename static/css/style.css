@@ -141,6 +141,14 @@ code {
   font-size: small;
 }
 
+.maintained {
+  color: var(--blue);
+}
+
+.unmaintained {
+  color: var(--red);
+}
+
 
 /********************* Navbar *********************/
 
