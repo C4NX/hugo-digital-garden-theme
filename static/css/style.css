@@ -149,6 +149,9 @@ code {
   color: var(--red);
 }
 
+.writing {
+  color: var(--yellow);
+}
 
 /********************* Navbar *********************/
 

@@ -1,10 +1,14 @@
 {{ with .Params.status }}
     {{ if eq "active" . }}
-    <span class="status">Active ⚡</span>
+    <span class="status">Actif ⚡</span>
     {{ else if eq "maintained" . }}
     <span class="status maintained">Maintained 🛠️</span>
     {{ else if eq "unmaintained" . }}
     <span class="status unmaintained">Unmaintained 📄</span>
+    {{ else if eq "complete" . }}
+    <span class="status">Complete ✅</span>
+    {{ else if eq "writing" . }}
+    <span class="status writing">Écriture ⚒️</span>
     {{ else }}
     <span class="status">{{ . | humanize }}</span>
     {{ end }}
