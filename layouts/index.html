@@ -22,8 +22,16 @@
 			{{ if .Summary }} <p class="subheading">{{ .Summary }}</p> {{ end }}
 			{{ end }}
 			<div class="row row-cols-1 g-4 mb-5">
-				{{ range ( where site.RegularPages "Section" "posts" | first 6 ) }}
-				{{ partial "home_garden.html" . }}
+
+				{{ $pages := (where site.RegularPages "Section" "posts" | first 6) }}
+				{{ $pagelen := len $pages }}
+
+				{{ if eq $pagelen 0 }}
+					<p>Pas encore d'article sur le site.</p>
+				{{ end }}
+
+				{{ range ( $pages ) }}
+					{{ partial "home_garden.html" . }}
 				{{ end }}
       		</div>
 			{{ with .Site.GetPage "section" "posts" }}
