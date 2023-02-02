@@ -12,12 +12,12 @@
 	{{ end }}
 
 	{{ if .Site.Params.Description }}
-	<div class="mb-5 py-4">
+	<div class="mt-5 pt-4">
 		<h2 class="bio lh-base fs-1 read-font">{{ .Site.Params.Description | markdownify | safeHTML }}</h2>
 	</div>
+	{{ end }}
+	{{ with .Site.GetPage "/_index.md" }} {{ .Content | markdownify | safeHTML }} {{ end }}
 	<hr>
-	{{ end}}
-
 	</div>
 </div>
 
