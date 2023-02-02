@@ -16,7 +16,7 @@
             <div class="col-sm-7">
                     {{ if .Summary | safeHTML }} 
                     <h4 class="card-title display-2">{{ .Title }}</h4>
-                    <p class="roboto fs-2 pb-3">{{ .Summary }}</p>
+                    <p class="read-font fs-2 pb-3">{{ .Summary }}</p>
                     {{ else }}
                     <h4 class="card-title display-2 pb-3">{{ .Title }}</h4>
                     {{ end }}
@@ -29,7 +29,7 @@
         </div>
 
     <div class="container py-2">
-        <div class="roboto main-content p-5">
+        <div class="read-font main-content p-5">
             {{ if .Params.pdf_url }}
                 <embed src="{{ .Params.pdf_url }}" type="application/pdf" width="100%" height="500px"/>
                 <div style="text-align: right">

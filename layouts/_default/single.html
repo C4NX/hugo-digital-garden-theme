@@ -6,7 +6,7 @@
             <h1 class="display-2 mb-4 text-center">{{ .Title }}</h1>
         </div>
         {{ with .Summary }}
-        <p class="text-center fs-4 fst-italic roboto">{{ . }}</p>
+        <p class="text-center fs-4 fst-italic read-font">{{ . }}</p>
         {{ end }}
         <div class="text-center pt-4">
             {{ with .Params.links }}
@@ -55,7 +55,7 @@
     </div>
 
     <div class="container-fluid py-2">
-        <div class="roboto main-content">
+        <div class="read-font main-content">
             {{ .Content | safeHTML }}
         </div>
     </div>

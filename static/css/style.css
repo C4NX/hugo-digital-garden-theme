@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
 :root {
     --blue: #0A94C8;
     --lighter-blue: #addbec;
@@ -193,10 +191,9 @@ code {
 /********************* Home *********************/
 
 .name {
-    font-weight: 800;
+  font-weight: 800;
 }
 .bio {
-  max-width: 750px;
   font-weight: 200;
 }
 .heading {
@@ -295,8 +292,10 @@ code {
   font-size: 22px;
 }
 
-.roboto {
-  font-family: 'Rototo', sans-serif;
+.read-font {
+  font-family: "source-sans-pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /*.main-content::first-letter {
