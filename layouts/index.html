@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <div class="mt-5 pt-5 pb-1">
-	<div class="container">
+	<div class="container readme-style">
 	{{ if .Site.Params.Image }}
 		<div class="d-flex gap-3" style="align-items:center">
 			<img src="{{ .Site.Params.Image }}" class="img-fluid rounded-circle">
@@ -11,20 +11,20 @@
 		<h1 class="name display-1"><b>{{ .Site.Params.Name }}</b></h1>
 	{{ end }}
 
-	{{ if .Site.Params.Description }}
+	{{ with .Site.GetPage "/_index.md" }} 
+	{{ if .Summary }}
 	<div class="mt-5 pt-4">
-		<h2 class="bio lh-base fs-1 read-font">{{ .Site.Params.Description | markdownify | safeHTML }}</h2>
+		<h2 class="bio lh-base fs-1 read-font" style="color: var(--grey)">{{ .Summary | markdownify | safeHTML }}</h2>
 	</div>
 	{{ end }}
-	{{ with .Site.GetPage "/_index.md" }} {{ .Content | markdownify | safeHTML }} {{ end }}
-	<hr>
+	{{ .Content | markdownify | safeHTML }} 
+	{{ end }}
+	<hr class="my-5">
 	</div>
 </div>
 
-<!--<script src="/js/three.js"></script>-->
-
-<div class="container py-3">
-	<div class="row justify-content-between my-5">
+<div class="container">
+	<div class="row justify-content-between">
 		<!-- Garden / Blog -->
 		<div class="col-lg-4">
 			{{ with .Site.GetPage "section" "posts" }}

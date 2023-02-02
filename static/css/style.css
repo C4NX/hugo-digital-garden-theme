@@ -99,6 +99,10 @@ table td{
   font-size: x-small;
 }
 
+.readme-style {
+  text-align: justify;
+}
+
 @media(max-width: 990px){
   .card{
     margin: 20px;
