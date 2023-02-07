@@ -1,6 +1,6 @@
 <div class="col">
     <div class="card top-highlight">
-        {{ $img := (.Resources.ByType "image").GetMatch "*featured*" }}
+        {{ $img := (.Resources.ByType "image").GetMatch "*preview*" }}
         {{ if $img }}
         {{ $img = $img.Fit "500x500" }}
         {{ with $img }}
